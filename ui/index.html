@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G6 Boss Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="menu-container" style="display: none;">
+        <div class="header">
+            <div class="header-text">
+                <div class="main-title">BOSS MENÜ</div>
+                <div class="sub-title" id="job-label">MESLEK ADI</div>
+            </div>
+            <button class="close-btn" id="close-btn">X</button>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="section">
+                <div class="section-header">ÇALIŞANLAR</div>
+                <div class="controls">
+                    <select id="employee-list">
+                        <option value="" disabled selected>Çalışan seç</option>
+                    </select>
+                    <div class="action-row">
+                        <button class="btn btn-red" id="fire-btn">İşten Çıkar</button>
+                        <select id="grade-list">
+                            <option value="" disabled selected>Rütbe Seç</option>
+                        </select>
+                        <button class="btn btn-gray" id="set-grade-btn">Rütbe Ayarla</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>İSİM</th>
+                                <th>RÜTBE</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employee-table">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">YAKINDAKİ OYUNCULAR</div>
+                <div class="controls">
+                    <div class="action-row">
+                        <select id="nearby-players">
+                            <option value="" disabled selected>Oyuncu seç</option>
+                        </select>
+                        <button class="btn btn-gold" id="hire-btn">İşe Al</button>
+                    </div>
+                </div>
+
+                <div class="section-header">PARA YÖNETİMİ</div>
+                <div class="money-box">
+                    <div class="balance-text">Bakiye: <span id="balance">$0</span></div>
+                    <input type="number" id="money-amount" placeholder="Miktar girin" min="1">
+                    <div class="action-row">
+                        <button class="btn btn-gold" id="deposit-btn">Para Yatır</button>
+                        <button class="btn btn-gray" id="withdraw-btn">Para Çek</button>
+                    </div>
+                </div>
+                <button class="refresh-btn" id="refresh-data">Verileri Yenile</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
